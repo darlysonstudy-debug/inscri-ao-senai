@@ -58,6 +58,17 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #0015ff;
 }
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;}
+
 </style>
 <body>
 
@@ -84,8 +95,9 @@ input[type=submit]:hover {
     <option value="Eletroeletrônica">Eletroeletrônica</option>
   </select>
 
-  <label for="fname">Observações</label>
+  <textarea> for="fname">Observações</textarea>
   <input type="text" id="fname" name="Observações">
+
   
   <input type="submit" value="Enviar Inscrição">
 </form>
