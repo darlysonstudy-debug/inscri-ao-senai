@@ -1,108 +1,169 @@
 <!DOCTYPE html>
-<html>
-<style>
+<html lang="en">
 
-form {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  width: auto;
-  margin: 0 auto;
-  padding: 20px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-label {display: block;}
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            /* Light 300 */
+        }
+    </style>
 
-input[type=text], select {
-  width: 50%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=email], select {
-  width: 50%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=telefone], select {
-  width: 50%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;}
-body{
-background-color: #006eff;
-}
-h2{
-    color: rgb(0, 0, 0);
-}
-input[type=submit] {
-  width: 50%;
-  background-color: #3c80d8;
-  color: white;
-  padding: 14px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+        }
 
-input[type=submit]:hover {
-  background-color: #0015ff;
-}
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;}
+        body {
+            background-color: #2A09F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-</style>
+        .card {
+            position: relative;
+            background-color: ghostwhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 375px;
+            height: 500px;
+            border-radius: 8.5px;
+        }
+
+        a {
+            position: absolute;
+            top: 30px;
+        }
+
+        #nav {
+            border-radius: 20px;
+            padding: 6px;
+            font-size: 16.6px;
+            color: ghostwhite;
+            background-color: #464751;
+            cursor: pointer;
+        }
+
+        h2 {
+            position: relative;
+            top: 1.5px;
+            color: #154672;
+        }
+
+
+        form {
+            position: relative;
+            left: 9px;
+            font-size: 16.6px;
+            /* Light 300 */
+        }
+
+        label {
+            font-weight: bold;
+            color: #464751;
+        }
+
+        form input {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            height: 23px;
+            width: 340px;
+            border: 1px solid rgb(185, 185, 185);
+            border-radius: 5px;
+        }
+
+        select {
+            margin-bottom: 8px;
+            margin-top: 6px;
+            width: 333px;
+            height: 28px;
+            padding: 4.5px;
+            border-radius: 5px;
+            border: 1px solid rgb(185, 185, 185);
+            background-color: rgb(255, 255, 255);
+            color: #464751;
+        }
+
+        .coment_block {
+            margin-top: 5px;
+            width: 340px;
+            height: 45px;
+            border-radius: 5px;
+            margin-bottom: 9px;
+            border: 2px solid black;
+            resize: none;
+            position: relative;
+            left: -.7px;
+        }
+
+        .input_send {
+            width: 329.5px;
+            height: 33px;
+            color: ghostwhite;
+            background-color: #004B8E;
+        }
+
+        .input_send,
+        select {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
 <body>
-
-
-<form action="/action_page.php">
-<h2>Inscrição SENAI</h2>
-
-  <label for="fname">Nome Completo</label>
-  <input type="text" id="fname" name="nome completo">
-
-  <label for="lname">E-mail</label>
-  <input ty<label for="curso desejado">Cursos</label>pe="email" id="lname" name="Email">
-  
-  <label for="lname">Telefone</label>
-  <input type="telefone" id="lname" name="Email">
-
-  
-  <select id="text" name="text">
-    <option value="Selecione...">Selecione...</option>
-    <option value="ADS">Desenvolvimento de Sistemas</option>
-    <option value="Logística">logística</option>
-    <option value="Informática">Informática</option>
-    <option value="Eletrotécnica">Eletrotécnica</option>
-    <option value="Eletroeletrônica">Eletroeletrônica</option>
-  </select>
-
-  <textarea>Observações...</textarea>
-  <input type="text" id="fname" name="Observações">
-
-  
-  <input type="submit" value="Enviar Inscrição">
-</form>
-
+    <a href="../index.html"><button id="nav">VOLTAR</button></a>
+    <div class="card">
+        <h2>Inscrição SENAI</h2>
+        <form action="/enviar">
+            <label for="name">Nome Completo:</label>
+            <br>
+            <input type="text" name="name" required>
+            <br>
+            <label for="email">E-mail:</label>
+            <br>
+            <input type="email" name="email" required>
+            <br>
+            <label for="tel">Telefone:</label>
+            <br>
+            <input
+  type="tel"
+  inputmode="tel"
+  name="telefone"
+  id="telefone"
+  placeholder="(11) 9 8765-4321"
+  pattern="^\(?\d{2}\)?\s?9\d{4}\-?\d{4}$"
+  maxlength="15"
+  aria-label="telefone"
+  required
+/>
+            <br>
+            <label for="course">Curso desejado:</label>
+            <br>
+            <select name="course" required>
+                <option value="header">Selecione...</option>
+                <option value="tec.info">Técnico em Informática</option>
+                <option value="tec.elect">Técnico em Eletrônica</option>
+                <option value="tec.mec">Técnico em Mecânica</option>
+            </select>
+            <br>
+            <label for="coment" class="coments">Observações:</label>
+            <br>
+            <textarea name="coment" class="coment_block"></textarea>
+            <br>
+            <input class="input_send" type="submit" value="Enviar Inscrição">
+        </form>
+    </div>
 </body>
+
 </html>
-
-
